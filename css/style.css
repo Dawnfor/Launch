@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    //--site_color:#252525;
+    //--theme_color:#ffde00;
+    --theme_color: #D62323;
+    --site_color: #fff;
+}
+
+body {
+    color: var(--site_color);
+    background-color: var(--theme_color);
+    position: relative;
+    font-family: "PT Serif", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+header {
+    width: 100%;
+    margin-top: 25px;
+}
+
+header .content_flash {
+    width: 85%;
+    margin: 0 auto;
+}
+
+header .content_flash .site_logo {
+    text-decoration: none;
+    color: var(--site_color);
+    display: inline-block;
+    font-size: 44px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+}
+
+header span.site_description {
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    float: left;
+}
+
+header #main_navigation {
+    margin: 0;
+    padding: 0;
+    float: right;
+
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 3px 15px;
+}
+
+nav ul li a {
+    margin-right: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--site_color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.1s;
+}
+
+nav ul li a:hover,
+.current_page {
+    border-bottom: 4px solid var(--site_color);
+}
+
+main {
+    min-height: 550px;
+}
+
+.banner {
+    width: 90%;
+    margin: auto;
+    padding-top: 7em;
+}
+
+.banner img {
+    width: 100%;
+}
+
+main .banner_content {
+    position: absolute;
+    top: 400px;
+    right: 20%;
+    max-width: 23em;
+}
+
+.banner_heading {
+    font-size: 1.9em;
+    line-height: 1.3;
+    letter-spacing: .125em;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: .55em;
+    text-transform: uppercase;
+}
+
+.banner_text {
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: .70em;
+    font-size: 21px;
+}
+
+.banner_link {
+    margin-top: 1em;
+    color: var(--site_color);
+    text-decoration: none;
+    border-bottom: 3px solid var(--site_color);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .toggleClass {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: #f0f0f0;
+        padding: 12px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .toggleClass span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #000;
+        margin: 5px 0;
+        border-radius: 40px;
+
+
+    }
+    #main_navigation {
+        width: 80%;
+        background: #F1F1F1;
+        height: 100%;
+        position: fixed;
+        color: #000;
+        left: -44420px;
+        transition: all 0.5s linear;
+        opacity: 1.0;
+    }
+    #main_navigation.active {
+        left: 0;
+        top: 0;
+    }
+    #main_navigation ul {
+        list-style: none;
+        margin: 40px 0;
+        background-color: #fff;
+    }
+    #main_navigation ul li {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #F1F1F1;
+    }
+    #main_navigation ul li a {
+        color: #000;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+
+    header .content_flash .site_logo {
+        margin: 0 20%;
+
+    }
+    header span.site_description {
+        margin: 0 10%;
+    }
+    .banner {
+        padding-top: 3em;
+    }
+    main .banner_content {
+        top: 250px;
+        right: 0%;
+    }
+    .banner_heading {
+        font-size: 24px;
+        text-align: center;
+    }
+    .banner_text {
+        font-size: 18px;
+        text-align: center;
+    }
+    .banner_link {
+
+        margin: 0 25%;
+        font-size: 14px;
+    }
+
+}
